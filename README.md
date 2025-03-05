@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe | Tech Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #00b4d8;
+            --accent: #64ffda;
+            --text: #ccd6f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+
+        body {
+            background: var(--primary);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 4rem 0;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 5px;
+            border: 3px solid var(--secondary);
+            box-shadow: 0 0 30px var(--secondary);
+            transition: transform 0.3s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Sections */
+        .section {
+            margin: 6rem 0;
+            padding: 3rem;
+            background: rgba(10, 25, 47, 0.9);
+            border: 1px solid var(--secondary);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
+            z-index: -1;
+            animation: animate 20s linear infinite;
+        }
+
+        @keyframes animate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            padding: 2rem;
+            border: 1px solid var(--secondary);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px var(--secondary);
+        }
+
+        h1 {
+            font-size: 4rem;
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .contact-links a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 1rem 0;
+            display: block;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: var(--secondary);
+        }
+
+        .linkedin-cta {
+            text-align: center;
+            padding: 4rem;
+            position: relative;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            background: var(--secondary);
+            box-shadow: 0 0 20px var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <!-- About Me Section -->
+        <section class="hero">
+            <img src="your-photo.jpg" alt="rishi" class="profile-img">
+            <div>
+                <h1>Rishi Ranjan</h1>
+                <h2>Full Stack Developer</h2>
+                <div class="experience">
+                    <p>1+ years of professional experience in software development</p>
+                    <ul>
+                        <li>Python Expert (Django, Flask, Automation)</li>
+                        <li>Java Specialist (Spring Boot, Microservices)</li>
+                        <li>Ruby & PHP Backend Development</li>
+                     
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+          <!-- Technical Skills -->
+        <section class="section">
+            <h2>Technical Arsenal</h2>
+            <div class="grid">
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <p>Python • Java • Ruby • PHP • JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Backend Tech</h3>
+                    <p>Django • Spring Boot • Ruby on Rails • Laravel • Node.js</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Database & DevOps</h3>
+                    <p>MySQL • PostgreSQL • MongoDB • Docker • AWS</p>
+                </div>
+            </div>
+        </section>
+
+  <!-- Internships -->
+        <section class="section">
+            <h2>Professional Journey</h2>
+            <div class="grid">
+                <div class="skill-card">
+                    <h3>Intership Trainee.</h3>
+                    <p>February-March 2025 | Team Lead and Participation</p>
+                    <ul>
+                        <li> Marketing, Conference Management, and Data Sheet Management Successfully completed projects in:
+                         <li>Marketing</li>
+                         <li>Conference organization</li>
+                         <li> Data sheet management</li>
+                         <li>Played a key role in:
+                         <li>Planning and executing marketing strategies</li>
+                         <li>Coordinating conferences</li>
+                         <li>Managing data sheets to ensure accuracy and efficiency</li>
+                         <li>Skilled in:</li>
+                         <li>Event planning</li>
+                         <li>Data analysis</li>
+                         <li>Strategic communication to drive successful outcomes</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Worked with Bikers Nepal Pvt.Ltd.</h3>
+                    <p>August-September 2024 |Data Science and Analyst Engineering</p>
+                    <ul>
+                        <li>Worked with Nepal Motorbike Tours Nepal, contributing to multiple key projects.</li>
+                        <li>Developed structured datasets for each tour using Python, improving data management and analysis.</li>
+                        <li>Designed an intuitive and visually appealing website interface using AI tools.</li>
+                        <li>Enhanced the brand's visual identity by working on logo design.</li>
+                        <li>Utilized GitHub for:
+                        <li>Efficient v</li>ersion control</li>
+                        <li>Seamless deployment</li>
+                        <li>Simplified web development process</li>
+                    </ul>
+                </div>
+            
+            
+            <div class="skill-card">
+                    <h3>Working with UPRIDE </h3>
+                    <p>January-Present 2025 |Data Science and Software Engineering</p>
+                    <ul>
+                      <li>Worked on projects involving:</li>
+                      <li>SMTP (automating email workflows)</li>
+                      <li>Pandas (data manipulation and analysis)</li>
+                      <li>Data Sheets Arrangement (structuring large datasets efficiently)</li>
+                      <li>JSON (managing seamless data exchange)</li>
+                      <li>HTML (web development)</li>
+                      <li>File and Path Directory Management (optimizing storage and retrieval</li>
+                      <li>Blogging (content creation and management)</li>
+                      <li>Automated email workflows using SMTP.</li>
+                      <li>Performed data manipulation and analysis with Pandas.Structured large datasets for efficient processing.</li>
+                      <li>Structured large datasets for efficient processing.</li>
+                      <li>Managed JSON for smooth data exchange.Utilized HTML for web development.</li>
+                      <li>Utilized HTML for web development.</li>
+                      <li>Organized file systems for optimized storage and retrieval.</li>
+                      <li>Created and managed blog content to enhance digital engagement.</li>
+                      <li>Outcome & Skills Gained</li>
+                      <li>Strengthened technical proficiency.</li>
+                      <li>Improved problem-solving skills in real-world applications.</li>
+                      <li>Gained hands-on experience in blogging and publishing.</li>
+                   </ul>
+                </div>
+                
+            
+                <div class="skill-card">
+                    <h3>Worked at Up-Server</h3>
+                    <p>November-January 2024-2025 | Experience</p>
+                    <ul>
+                    <li>Worked on multiple projects that enhanced my technical and organizational skills.</li>
+                    <li>Gained hands-on experience with:</li>
+                    <li>Microsoft Excel & PowerPoint – Improved data management and presentation skills.Python & JavaScript – Developed automation solutions and streamlined processes.Bulk File Arrangement – Ensured efficient data management.CSS for Web Design – Designed background web pages for enhanced aesthetics.</li>
+                    <li>Python & JavaScript – Developed automation solutions and streamlined processes.Bulk File Arrangement – Ensured efficient data management.CSS for Web Design – Designed background web pages for enhanced aesthetics.</li>
+                    <li>Bulk File Arrangement – Ensured efficient data management.CSS for Web Design – Designed background web pages for enhanced aesthetics.</li>
+                    <li>CSS for Web Design – Designed background web pages for enhanced aesthetics.</li>
+                    <li>Automated workflows to increase efficiency.</li>
+                    <li>Managed remote and hybrid work schedules, adapting to different work environments.</li>
+                    <li>Experience significantly boosted my confidence and made data entry & related tasks more efficient.</li>
+                  </ul>
+                </div>
+                    
+                     
+              
+                    
+                  
+        </section>
+    </div>
+    
+      <!-- LinkedIn CTA -->
+        <section class="linkedin-cta">
+            <h2>Professional Network</h2>
+            <a href="https://www.linkedin.com/in/rishi-ranjan-7984a134a/" target="_blank" class="cta-button">
+                <i class="fab fa-linkedin"></i> Connect on LinkedIn
+            </a>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <h2>Contact & Links</h2>
+            <div class="grid">
+                <div class="skill-card">
+                    <h3>Direct Contact</h3>
+                    <div class="contact-links">
+                        <a href="tel:+91 8609696428"><i class="fas fa-phone"></i> +91 8609696428</a>
+                        <a href="mailto:rishiranjangtk@gmail.com.com"><i class="fas fa-envelope"></i>rishiranjangtk@gmail.com</a>
+                        <a href="resume.pdf" download><i class="fas fa-download"></i> Download Resume</a>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Social Profiles</h3>
+                    <div class="contact-links">
+                        <a href="https://github.com/rishirandom" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        
+                        <a href="https://www.linkedin.com/in/rishi-ranjan-7984a134a/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+      
+
+    <script>
+        // Particles.js config
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80 },
+                color: { value: '#00b4d8' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5 },
+                size: { value: 3 },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.skill-card').forEach((el) => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(50px)';
+            el.style.transition = 'all 0.5s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
